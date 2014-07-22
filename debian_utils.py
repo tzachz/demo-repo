@@ -5,6 +5,10 @@ import os
 from fabric.api import task, put, run, env, hosts, cd
 
 
+def save():
+    return 0
+
+
 def get_destination_file_folder(file_name):
     folder_name = re.match("(^.+)_[\w\.\-]+_amd64\.deb$", ntpath.basename(file_name)).groups()[0]
     folder = '/home/debian/%s' % folder_name
